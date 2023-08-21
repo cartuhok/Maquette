@@ -1,15 +1,17 @@
 import { OrbitControls } from '@react-three/drei'
+import House from './House'
+
+//#D28D4B
 
 export default function App()
 {
     return <>
 
+        <ambientLight intensity={1} />
+        
         <OrbitControls makeDefault />
 
-        <mesh scale={ 1.5 }>
-            <boxGeometry />
-            <meshNormalMaterial />
-        </mesh>
+        <House scale={0.1}/>
 
     </>
 }
