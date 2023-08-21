@@ -1,19 +1,17 @@
-import './App.css'
+import studio from "@theatre/studio"
+import extension from "@theatre/r3f/dist/extension"
+import React, { Suspense } from "react"
 import ReactDOM from 'react-dom/client'
-import { Canvas } from '@react-three/fiber'
 import App from './App'
+import './App.css'
 
-const root = ReactDOM.createRoot(document.querySelector('#root'))
+studio.extend(extension)
+studio.initialize()
 
-root.render(
-    <Canvas
-        camera={ {
-            fov: 45,
-            near: 0.05,
-            far: 10,
-            position: [ 1, 2, 6 ]
-        } }
-    >
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <Suspense fallback={null}>
         <App />
-    </Canvas>
-)
+      </Suspense>
+    </React.StrictMode>
+  )
