@@ -17,16 +17,21 @@ import {
 export default function App() {
   const sheet = getProject("Fly Through", {state: flyThroughState}).sheet("Scene")
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [camera, setCamera] = useState(true)
+
+  const [isRoofMoved, setIsRoofMoved] = useState(false)
+  
 
   const handleScroll = (position) => {
     setScrollPosition(position);
   };
+  
 
     return ( <>
       <Canvas gl={{ preserveDrawingBuffer: true }}>
         <ScrollControls pages={5} >
           <SheetProvider sheet={sheet}>
-            <House onScrollChange={handleScroll} />
+            <House onScrollChange={handleScroll} camera={camera} isRoofMoved={isRoofMoved} />
           </SheetProvider>
         </ScrollControls>
       </Canvas>
@@ -37,8 +42,19 @@ export default function App() {
           <img src="logo.svg" />
         </a>
         <div className="right-items">
-          <a href="#" className="button item2-btn">Item 2</a>
-          <a href="#" className="button item3-btn">Item 3</a>
+
+          {camera &&
+            <a href="#" className="button item2-btn">Item 2</a>
+          }
+          
+          {camera ? 
+            <a href="#" className="button item3-btn">Item 3</a> :
+            <a href="#" className="button item2-btn" onClick={() => {
+              setCamera(!camera)
+              setIsRoofMoved(true)
+            }}>X</a>
+          }
+
         </div>
       </div>
 
@@ -70,14 +86,40 @@ export default function App() {
     ) : null}
 
       {/* Conditionally render the info-text div */}
-      {scrollPosition > 0.8 ? (
-      <div className="info-4">
-        <span>THE</span>
-        <h1>Floor Plan</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor repellat mollitia excepturi omnis eaque deserunt iusto aperiam rem laudantium, eos tenetur, temporibus qui cupiditate? Perspiciatis nihil autem error consectetur dicta.</p>
-      </div>
+      {scrollPosition > 0.8 & camera ? ( 
+      <>
+        <div className="info-4">
+          <span>THE</span>
+          <h1>Floor Plan</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor repellat mollitia excepturi omnis eaque deserunt iusto aperiam rem laudantium, eos tenetur, temporibus qui cupiditate? Perspiciatis nihil autem error consectetur dicta.</p>
+        </div>
+
+        <div className="orbitBtn">
+          <a href="#" className="button item2-btn" onClick={() => { 
+            setCamera(!camera)
+            setIsRoofMoved(false)
+          }}>Explore Model</a>
+        </div>
+ 
+      </>
     ) : null}
 
+
+      {/* Conditionally render the info-text div */}
+      {scrollPosition > 0.99 & camera ? (  
+          <div className="floorPlan">
+          <a href="#"><div className="floorPlan-1">1</div></a>
+          <a href="#"><div className="floorPlan-2">2</div></a>
+          <a href="#"><div className="floorPlan-3">3</div></a>
+          {/*<div className="floorPlan-4">4</div> */}
+          </div>
+        ) : null}
+
+  
+      <div className="scroll-progress-container">
+        <div className="scroll-progress-bar" style={{ width: `${scrollPosition * 100}%` }}></div>
+      </div>
+      <div className="scroll-percentage">DEMO {Math.round(scrollPosition * 100)}%</div>
     
     </>
   )

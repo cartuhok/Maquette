@@ -7,13 +7,16 @@ import { useGLTF, useTexture, ScrollControls, useScroll, Html, OrbitControls } f
 import { useLoader, useFrame } from "@react-three/fiber"
 import { TextureLoader } from "three"
 import { getProject, val } from "@theatre/core"
-import { useEffect } from "react"
+import { useEffect} from "react"
 
 import {
   SheetProvider,
   PerspectiveCamera,
   useCurrentSheet,
 } from "@theatre/r3f"
+
+
+
 
 export default function House(props) {
   const sheet = useCurrentSheet()
@@ -22,7 +25,7 @@ export default function House(props) {
   const roofRef = useRef()
   const snowholderRef = useRef()
   const snowholderMountRef = useRef()
- 
+  
 
   const textures = useMemo(() => {[
     useLoader(TextureLoader, "./leather.png"),
@@ -43,8 +46,24 @@ export default function House(props) {
     props.onScrollChange(scroll.offset);
   }, [scroll.offset, props]);
 
+
+  useEffect(() => {
+    if (!props.camera) { // If in orbit controls
+      roofRef.current.position.set(...originalPositionRoof.current);
+      snowholderRef.current.position.set(...originalPositionSnowholder.current);
+      snowholderMountRef.current.position.set(...originalPositionSnowholderMount.current);
+    } else if (props.isRoofMoved) {
+      const moveAmount = 165 * 0.1; // 0.1 is the difference between 0.85 and 0.75
+      roofRef.current.position.x = originalPositionRoof.current[0] - moveAmount;
+      snowholderRef.current.position.x = originalPositionSnowholder.current[0] - moveAmount;
+      snowholderMountRef.current.position.x = originalPositionSnowholderMount.current[0] - moveAmount;
+    }
+  }, [props.camera, props.isRoofMoved]);
+  
+  
+
   // our callback will run on every animation frame
-  useFrame(() => {
+  useFrame(({camera, size}) => {
   // the length of our sequence
   const sequenceLength = val(sheet.sequence.pointer.length)
   // update the "position" of the playhead in the sequence, as a fraction of its whole length
@@ -65,6 +84,7 @@ export default function House(props) {
     snowholderMountRef.current.position.set(...originalPositionSnowholderMount.current)
   }
 
+
   props.onScrollChange && props.onScrollChange(scroll.offset);
   // console.log(scroll.offset);
 
@@ -76,7 +96,7 @@ export default function House(props) {
     {/* <fog attach="fog" color={bgColor} near={0.05} far={100} /> */}
     <ambientLight intensity={1} />
 
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={props.camera ? 1 : 0.15} position={!props.camera && [0,-1,0]}>
       <mesh
         name="fig0029"
         geometry={nodes.fig0029.geometry}
@@ -202,13 +222,16 @@ export default function House(props) {
         geometry={nodes.Floor_Baked.geometry}
         material={materials.Floor_Baked}
         position={[0, 0.905, 3.343]}
-      />
+      >
+      </mesh>
+
       <mesh
         name="Base_Baked"
         geometry={nodes.Base_Baked.geometry}
         material={materials.Base_Baked}
         position={[12.846, 3.002, 3.336]}
       />
+
       <mesh
         name="Walls_Baked"
         geometry={nodes.Walls_Baked.geometry}
@@ -230,16 +253,33 @@ export default function House(props) {
         position={[-3.814, 3.867, -0.751]}
       />
       </group>
-       <PerspectiveCamera
+       {/* <PerspectiveCamera
         theatreKey="Camera"
         makeDefault
         position={[0, 0, 0]}
         fov={45}
         near={0.1}
         far={500}
-      />
+      /> */}
       {/* <OrbitControls /> */}
-      
+
+      {props.camera ? (
+       <PerspectiveCamera
+       theatreKey="Camera"
+       makeDefault
+       position={[0, 0, 0]}
+       fov={45}
+       near={0.1}
+       far={500}
+     />
+    ) : <OrbitControls makeDefault 
+          maxPolarAngle={1.7}
+          autoRotateSpeed={0.5}
+          maxDistance={7}
+          camera={props.mycamera}
+    /> }
+
+       
     </>
   )
 }

@@ -256,6 +256,100 @@ div.info-4 {
   cursor: pointer;
 }
 
+.orbitBtn {
+  position: absolute;
+  top: 55vh;
+  right: 8.5vw;
+  color: white;
+  /* background-color: rgba(15, 15, 15, 0.7);  */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10; /* ensure it's on top */
+  width: 20%;
+  overflow: hidden;
+}
+
+.floorPlan {
+  position: absolute;
+  top: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.floorPlan-1 {
+  position: absolute;
+  left: 45.5vw;
+  top: 12em;
+  background-color: rgba(15, 15, 15, 0.9);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.45;
+  text-decoration: none;
+  color: white;
+}
+
+.floorPlan-2 {
+  position: absolute;
+  left: 53.5vw;
+  top: 13em;
+  background-color: rgba(15, 15, 15, 0.9);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.45;
+  text-decoration: none;
+  color: white;
+}
+
+.floorPlan-3 {
+  position: absolute;
+  left: 53.5vw;
+  top: 19.5em;
+  background-color: rgba(15, 15, 15, 0.9);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.45;
+  text-decoration: none;
+  color: white;
+}
+
+
+.scroll-progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 1em;
+  background-color: #eee;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #D28D4B;
+  /* transition: width 0.25s; */
+  pointer-events: none;
+}
+
+.scroll-percentage {
+  position: fixed;
+  bottom: 1.5em;
+  right: 2em;
+  font-size: 12px;
+  z-index: 1001;
+  color: white;
+  font-size: 1.3em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  pointer-events: none;
+}
+
 }
 
 /*DESKTOPS*/
@@ -284,9 +378,9 @@ div.info-4 {
   }
   
   .logo img {
-    height: 5em;
+    height: 4em;
     width: auto;
-    margin-left: 0.9em;
+    margin-left: 1vw;
   }
   
   .button {
@@ -296,10 +390,10 @@ div.info-4 {
     color: #111827;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     text-decoration: none;
-    font-size: .875rem;
+    font-size: .75rem;
     font-weight: 600;
-    line-height: 1.25rem;
-    padding: 0.8rem 4rem;
+    line-height: 1.8em;
+    padding: 1em 5.5em;
     text-align: center;
     -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -317,8 +411,6 @@ div.info-4 {
     color: #ffffff;
   }
   
-  
-  
   div.info-1 {
     position: absolute;
     bottom: 1vh;
@@ -326,29 +418,31 @@ div.info-4 {
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
     padding: 10px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     z-index: 10; /* ensure it's on top */
-    width: 30%;
     height: 40vh;
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
   }
   
-  .info-1 p {
-    font-size: 1em;
-    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  }
-  
-  .info-1 span {
-    line-height: 2em;
-  }
-  
   .info-1 h1 {
-    line-height: 0.7em;
+    line-height: 0.8em;
     padding-bottom: 0.1em;
     margin: 0;
     font-size: 4em;
+    width: 30%;
+  }
+  
+  .info-1 p {
+    font-size: 1em;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-top: 0.5em;
+    width: 40%;
+  }
+  
+  .info-1 span {
+    line-height: 1.3em;
   }
   
   .info-1 button {
@@ -364,31 +458,30 @@ div.info-4 {
   
   div.info-2 {
     position: absolute;
-    top: 20vh;
-    right: 5vw;
+    top: 33vh;
+    left: 5vw;
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
     padding: 10px;
     border-radius: 5px;
     z-index: 10; /* ensure it's on top */
-    width: 30%;
     overflow: hidden;
     pointer-events: none;
+  }
+  
+  .info-2 h1 {
+    line-height: 0.8em;
+    padding-bottom: 0.1em;
+    margin: 0;
+    font-size: 4em;
+    width: 20%;
   }
   
   .info-2 p {
     font-size: 1em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    text-align: right;
-  }
-  
-  
-  .info-2 h1 {
-    line-height: 0.7em;
-    padding-bottom: 0.1em;
-    margin: 0;
-    font-size: 4em;
-    text-align: right;
+    margin-top: 1em;
+    width: 25%;
   }
   
   .info-2 button {
@@ -404,14 +497,13 @@ div.info-4 {
   
   div.info-3 {
     position: absolute;
-    top: 30vh;
+    top: 23vh;
     left: 5vw;
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
     padding: 10px;
     border-radius: 5px;
     z-index: 10; /* ensure it's on top */
-    width: 30%;
     height: 40vh;
     overflow: hidden;
     z-index: 1;
@@ -421,6 +513,7 @@ div.info-4 {
   .info-3 p {
     font-size: 1em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    width: 30%;
   }
   
   .info-3 span {
@@ -487,4 +580,51 @@ div.info-4 {
     cursor: pointer;
   }
   
+  .orbitBtn {
+    position: absolute;
+    top: 55vh;
+    right: 8.5vw;
+    color: white;
+    /* background-color: rgba(15, 15, 15, 0.7);  */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10; /* ensure it's on top */
+    width: 20%;
+    overflow: hidden;
+  
   }
+  
+  
+  .scroll-progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1em;
+    background-color: #eee;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  .scroll-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #D28D4B;
+    /* transition: width 0.25s; */
+    pointer-events: none;
+  }
+  
+  .scroll-percentage {
+    position: fixed;
+    bottom: 1.5em;
+    right: 2em;
+    font-size: 12px;
+    z-index: 1001;
+    color: white;
+    font-size: 1.3em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    pointer-events: none;
+  }
+  
+  
+}
