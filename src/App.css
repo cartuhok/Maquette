@@ -19,8 +19,279 @@ canvas {
 
 
 /*MOBILE*/
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .logo-text {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 94%;
+    left: 1.5vw;
+    top: 1.5vh;
+    height: 3em;
+  }
+  
+  .right-items {
+    display: flex;
+  }
+  
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .logo img {
+    height: 3.5em;
+    width: auto;
+    margin-left: 1vw;
+  }
+  
+  .button {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    color: #111827;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-decoration: none;
+    font-size: .75em;
+    font-weight: 600;
+    padding: 0.95em 2em;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    margin-top: 1vh;
+  }
+  
+  .item3-btn {
+    display: none;
+  }
+  
+  div.info-1 {
+    position: absolute;
+    bottom: 1vh;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.7); 
+    /* border-radius: 5px; */
+    overflow: hidden;
+    pointer-events: none;
+    padding: 1em;
+  }
+  
+  .info-1 h1 {
+    line-height: 0.8em;
+    padding-bottom: 0.1em;
+    margin: 0;
+    font-size: 1.5em;
+    width: 30%;
+  }
+  
+  .info-1 p {
+    font-size: 0.9em;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-top: 0.5em;
+    width: 100%;
+  }
+  
+  .info-1 span {
+    line-height: 1.3em;
+    font-size: 0.6em;
+  }
+  
+  .scrollIconContainer {
+   display: none;
+  }
+  
+  
+  div.info-2 {
+    position: absolute;
+    bottom: 1vh;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.7); 
+    /* border-radius: 5px; */
+    overflow: hidden;
+    pointer-events: none;
+    padding: 1em;
+  }
+  
+  .info-2 h1 {
+    line-height: 0.8em;
+    padding-bottom: 0.1em;
+    margin: 0;
+    font-size: 1.5em;
+    width: 20%;
+    margin-bottom: 0.3em;
+  }
+  
+  .info-2 p {
+    font-size: 0.9em;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-top: 1em;
+    width: 100%;
+  }
+  
+  div.info-3 {
+    position: absolute;
+    bottom: 1vh;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.7); 
+    /* border-radius: 5px; */
+    overflow: hidden;
+    pointer-events: none;
+    padding: 1em;
+  }
+  
+  .info-3 p {
+    font-size: 0.9em;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  
+  .info-3 span {
+    line-height: 2em;
+  }
+  
+  .info-3 h1 {
+    line-height: 0.7em;
+    padding-bottom: 0.3em;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  img {
+    z-index: 99999;
+  }
+  
+  div.info-4 {
+    position: absolute;
+    bottom: 1vh;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.7); 
+    /* border-radius: 5px; */
+    overflow: hidden;
+    pointer-events: none;
+    padding: 1em;
+  }
+  
+  .info-4 h1 {
+    line-height: 0.7em;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .info-4 p {
+    font-size: 0.9em;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-bottom: 0;
+  }
+  
+  .info-4 span {
+    line-height: 2em;
+  }
+  
+  
+  .orbitBtn {
+    display: none;
+  }
+  
+  
+  .floorPlan {
+    position: absolute;
+    top: 0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .floorPlan-1 {
+    position: absolute;
+    left: 35.5vw;
+    top: 22.5vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.45;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-2 {
+    position: absolute;
+    left: 60vw;
+    top: 25vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.45;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-3 {
+    position: absolute;
+    left: 61vw;
+    top: 38vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.45;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-4 {
+    position: absolute;
+    left: 30vw;
+    top: 32vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.45;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  
+  .scroll-progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1em;
+    background-color: #eee;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  .scroll-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #D28D4B;
+    /* transition: width 0.25s; */
+    pointer-events: none;
+  }
+  
+  .scroll-percentage {
+    display: none;
+  }
 }
 
 /*TABLETS*/
@@ -89,16 +360,13 @@ canvas {
 
 div.info-1 {
   position: absolute;
-  bottom: 1vh;
+  bottom: 8vh;
   left: 5vw;
   color: white;
   /* background-color: rgba(15, 15, 15, 0.7);  */
   padding: 10px;
   /* border-radius: 5px; */
-  z-index: 10; /* ensure it's on top */
-  height: 40vh;
   overflow: hidden;
-  z-index: 1;
   pointer-events: none;
 }
 
@@ -132,6 +400,53 @@ div.info-1 {
   cursor: pointer;
 }
 
+.scrollIconContainer {
+  position: absolute;
+  bottom: 11vw;
+  right: 10vw;
+  pointer-events: none;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 3.3em;
+  height: 5.5em;
+  box-shadow: inset 0 0 0 0.1em #ffffff;
+  border-radius: 2em;
+  top: 50%;
+}
+
+
+div.icon-scroll:before {
+  content: '';
+  width: 0.5em;
+  height: 0.5em;
+  background: #fff;
+  margin-left: -0.25em;
+  top: 1em;
+  border-radius: 0.3em;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+
+}
+
+@keyframes scroll {
+  0% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  transform: translateY(2em);
+  }
+}
+
+
 div.info-2 {
   position: absolute;
   top: 33vh;
@@ -151,13 +466,14 @@ div.info-2 {
   margin: 0;
   font-size: 4em;
   width: 20%;
+  margin-bottom: 0.3em;
 }
 
 .info-2 p {
   font-size: 1em;
   font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   margin-top: 1em;
-  width: 25%;
+  width: 30%;
 }
 
 .info-2 button {
@@ -180,7 +496,6 @@ div.info-3 {
   padding: 10px;
   border-radius: 5px;
   z-index: 10; /* ensure it's on top */
-  height: 40vh;
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
@@ -198,7 +513,7 @@ div.info-3 {
 
 .info-3 h1 {
   line-height: 0.7em;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.3em;
   margin: 0;
   font-size: 4em;
 }
@@ -214,57 +529,47 @@ div.info-3 {
   cursor: pointer;
 }
 
+
+img {
+  z-index: 99999;
+}
+
 div.info-4 {
   position: absolute;
   top: 20vh;
-  right: 8.5vw;
+  right: 8.7vw;
   color: white;
   /* background-color: rgba(15, 15, 15, 0.7);  */
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 10; /* ensure it's on top */
   width: 20%;
   overflow: hidden;
-  height: 40vh;
   pointer-events: none;
+}
+
+.info-4 h1 {
+  line-height: 0.7em;
+  margin: 0;
+  font-size: 4em;
 }
 
 .info-4 p {
   font-size: 1em;
   font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  margin-bottom: 0;
 }
 
 .info-4 span {
   line-height: 2em;
 }
 
-.info-4 h1 {
-  line-height: 0.7em;
-  padding-bottom: 0.1em;
-  margin: 0;
-  font-size: 4em;
-}
-
-.info-4 button {
-  background-color: white;
-  color: black;
-  border-color: white;
-  font-size: 20px;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  cursor: pointer;
-}
 
 .orbitBtn {
   position: absolute;
-  top: 55vh;
-  right: 8.5vw;
+  bottom: 20vh;
+  right: 8.7vw;
   color: white;
   /* background-color: rgba(15, 15, 15, 0.7);  */
   padding: 10px;
   border-radius: 5px;
-  z-index: 10; /* ensure it's on top */
   width: 20%;
   overflow: hidden;
 }
@@ -279,7 +584,7 @@ div.info-4 {
 .floorPlan-1 {
   position: absolute;
   left: 45.5vw;
-  top: 12em;
+  top: 25.5vh;
   background-color: rgba(15, 15, 15, 0.9);
   width: 1.5em;
   height: 1.5em;
@@ -288,12 +593,13 @@ div.info-4 {
   line-height: 1.45;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .floorPlan-2 {
   position: absolute;
-  left: 53.5vw;
-  top: 13em;
+  left: 53.35vw;
+  top: 28vh;
   background-color: rgba(15, 15, 15, 0.9);
   width: 1.5em;
   height: 1.5em;
@@ -302,12 +608,13 @@ div.info-4 {
   line-height: 1.45;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .floorPlan-3 {
   position: absolute;
-  left: 53.5vw;
-  top: 19.5em;
+  left: 53.35vw;
+  top: 41.5vh;
   background-color: rgba(15, 15, 15, 0.9);
   width: 1.5em;
   height: 1.5em;
@@ -316,7 +623,24 @@ div.info-4 {
   line-height: 1.45;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
+
+.floorPlan-4 {
+  position: absolute;
+  left: 44.3vw;
+  top: 35.4vh;
+  background-color: rgba(15, 15, 15, 0.9);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.45;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 
 .scroll-progress-container {
@@ -340,8 +664,8 @@ div.info-4 {
 
 .scroll-percentage {
   position: fixed;
-  bottom: 1.5em;
-  right: 2em;
+  bottom: 4vh;
+  right: 5.1vw;
   font-size: 12px;
   z-index: 1001;
   color: white;
@@ -413,14 +737,9 @@ div.info-4 {
   
   div.info-1 {
     position: absolute;
-    bottom: 1vh;
-    left: 5vw;
+    bottom: 15vh;
+    left: 4vw;
     color: white;
-    /* background-color: rgba(15, 15, 15, 0.7);  */
-    padding: 10px;
-    /* border-radius: 5px; */
-    z-index: 10; /* ensure it's on top */
-    height: 40vh;
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
@@ -430,12 +749,12 @@ div.info-4 {
     line-height: 0.8em;
     padding-bottom: 0.1em;
     margin: 0;
-    font-size: 4em;
+    font-size: 5em;
     width: 30%;
   }
   
   .info-1 p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     margin-top: 0.5em;
     width: 40%;
@@ -456,15 +775,58 @@ div.info-4 {
     cursor: pointer;
   }
   
+  .scrollIconContainer {
+    position: absolute;
+    bottom: 8vw;
+    right: 8vw;
+    pointer-events: none;
+  }
+  
+  .icon-scroll,
+  .icon-scroll:before {
+    position: absolute;
+    left: 50%;
+  }
+  
+  .icon-scroll {
+    width: 3.3em;
+    height: 5.5em;
+    box-shadow: inset 0 0 0 0.1em #ffffff;
+    border-radius: 2em;
+    top: 50%;
+  }
+  
+  
+  div.icon-scroll:before {
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    background: #fff;
+    margin-left: -0.25em;
+    top: 1em;
+    border-radius: 0.3em;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+  
+  }
+  
+  @keyframes scroll {
+    0% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    transform: translateY(2em);
+    }
+  }
+  
+  
   div.info-2 {
     position: absolute;
     top: 33vh;
-    left: 5vw;
+    left: 4vw;
     color: white;
-    /* background-color: rgba(15, 15, 15, 0.7);  */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 10; /* ensure it's on top */
     overflow: hidden;
     pointer-events: none;
   }
@@ -473,32 +835,23 @@ div.info-4 {
     line-height: 0.8em;
     padding-bottom: 0.1em;
     margin: 0;
-    font-size: 4em;
+    font-size: 5em;
     width: 20%;
+    margin-bottom: 0.3em;
   }
   
   .info-2 p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     margin-top: 1em;
-    width: 25%;
+    width: 30%;
   }
   
-  .info-2 button {
-    background-color: white;
-    color: black;
-    border-color: white;
-    font-size: 20px;
-    padding: 10px 60px;
-    border-radius: 5px;
-    margin: 10px 0px;
-    cursor: pointer;
-  }
   
   div.info-3 {
     position: absolute;
     top: 23vh;
-    left: 5vw;
+    left: 4vw;
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
     padding: 10px;
@@ -511,7 +864,7 @@ div.info-4 {
   }
   
   .info-3 p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     width: 30%;
   }
@@ -524,7 +877,7 @@ div.info-4 {
     line-height: 0.7em;
     padding-bottom: 0.1em;
     margin: 0;
-    font-size: 4em;
+    font-size: 5em;
   }
   
   .info-3 button {
@@ -538,61 +891,118 @@ div.info-4 {
     cursor: pointer;
   }
   
+  
+  img {
+    z-index: 99999;
+  }
+  
   div.info-4 {
     position: absolute;
     top: 20vh;
-    right: 8.5vw;
+    right: 8.7vw;
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 10; /* ensure it's on top */
     width: 20%;
     overflow: hidden;
-    height: 40vh;
     pointer-events: none;
   }
   
+  .info-4 h1 {
+    line-height: 0.7em;
+    margin: 0;
+    font-size: 5em;
+  }
+  
   .info-4 p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-bottom: 0;
   }
   
   .info-4 span {
     line-height: 2em;
   }
   
-  .info-4 h1 {
-    line-height: 0.7em;
-    padding-bottom: 0.1em;
-    margin: 0;
-    font-size: 4em;
-  }
-  
-  .info-4 button {
-    background-color: white;
-    color: black;
-    border-color: white;
-    font-size: 20px;
-    padding: 10px 60px;
-    border-radius: 5px;
-    margin: 10px 0px;
-    cursor: pointer;
-  }
   
   .orbitBtn {
     position: absolute;
-    top: 55vh;
-    right: 8.5vw;
+    bottom: 33vh;
+    right: 8.7vw;
     color: white;
     /* background-color: rgba(15, 15, 15, 0.7);  */
     padding: 10px;
     border-radius: 5px;
-    z-index: 10; /* ensure it's on top */
     width: 20%;
     overflow: hidden;
-  
   }
+  
+  .floorPlan {
+    position: absolute;
+    top: 0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .floorPlan-1 {
+    position: absolute;
+    left: 45.5vw;
+    top: 25.5vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-2 {
+    position: absolute;
+    left: 53.35vw;
+    top: 28vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-3 {
+    position: absolute;
+    left: 53.35vw;
+    top: 41.5vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .floorPlan-4 {
+    position: absolute;
+    left: 44.3vw;
+    top: 35.4vh;
+    background-color: rgba(15, 15, 15, 0.9);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
   
   
   .scroll-progress-container {
@@ -616,8 +1026,8 @@ div.info-4 {
   
   .scroll-percentage {
     position: fixed;
-    bottom: 1.5em;
-    right: 2em;
+    bottom: 4vh;
+    right: 5.1vw;
     font-size: 12px;
     z-index: 1001;
     color: white;
@@ -625,6 +1035,5 @@ div.info-4 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     pointer-events: none;
   }
-  
-  
+
 }
