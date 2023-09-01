@@ -21,7 +21,7 @@ import {
 export default function House(props) {
   const sheet = useCurrentSheet()
   const scroll = useScroll()
-  const { nodes, materials } = useGLTF("./models/modelHouse.glb")
+  const { nodes, materials } = useGLTF("./modelHouse.glb")
   const roofRef = useRef()
   const snowholderRef = useRef()
   const snowholderMountRef = useRef()
@@ -284,4 +284,4 @@ export default function House(props) {
   )
 }
 
-useGLTF.preload("./models/modelHouse.glb")
+useGLTF.preload("./modelHouse.glb")
