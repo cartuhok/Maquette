@@ -11,7 +11,7 @@ export default {
     ],
     root: 'src/',
     publicDir: "../public/",
-    base: './',
+    base: '/Maquette/',
     server:
     {
         host: true,
