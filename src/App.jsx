@@ -64,10 +64,10 @@ export default function App() {
         }
         {camera ? 
           <a href="https://carterrink.com/" target="_blank" className="button item3-btn">Contact</a> :
-          <a href="#" className="button item2-btn" onClick={() => {
+          <p className="close" onClick={() => {
             setCamera(!camera)
             setIsRoofMoved(true)
-          }}>X</a>
+          }}>X</p>
         }
       </div>
     </div>
