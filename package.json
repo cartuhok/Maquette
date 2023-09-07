@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-simple-image-viewer": "^1.2.2",
+    "react-spinners": "^0.13.8",
     "three": "^0.155.0",
     "vite-plugin-glsl": "^1.1.2"
   },
