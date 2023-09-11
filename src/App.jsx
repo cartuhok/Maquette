@@ -78,7 +78,7 @@ export default function App() {
       <div className="info-1">
         <span>THE</span>
         <h1>Farmsworth House</h1>
-        <p>The Farnsworth House, brought to you by the fictitious FNM Architecture, highlights the use of advanced 3D live rendering techniques within an architectural context. The house, accompanying photos, and the entirety of the "FNM Architecture" brand, including its logo, are purely imaginative constructs. All assets are CC0.</p>
+        <p>The Farnsworth House, brought to you by the fictitious FNM Architecture, highlights the use of advanced 3D live rendering techniques within an architectural context. The house, accompanying photos, and the entirety of the "FNM Architecture" brand, including its logo, are purely imaginative constructs. All assets are CC0 or purchased.</p>
       </div>
     ) : null}
 
